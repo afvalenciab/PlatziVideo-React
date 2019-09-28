@@ -1,17 +1,5 @@
-$color-font: #fff;
-$font-muli: "Muli", sans-serif;
-
-%a-settings {
-  display: inline-block;
-  text-decoration: none;
-  color: $color-font;
-  transition: 0.2s;
-  will-change: transform;
-}
-%a-transform {
-  text-decoration: underline;
-  transform: scale(1.04);
-}
+@import '../Vars.scss';
+// @import '../Icons.scss';
 
 .header {
   height: 70px;

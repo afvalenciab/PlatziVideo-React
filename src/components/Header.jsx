@@ -1,12 +1,12 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
-// import '../assets/styles/components/Icons.scss';
+import logo from '../assets/static/logo-platzi-video-BW2.png';
 
 const Header = () => {
   return (
     <header className='header'>
       <figure>
-        <img src='../assets/img/logo-platzi-video-BW2.png' alt='Logo Platzi Video' />
+        <img src={logo} alt='Logo Platzi Video' />
       </figure>
       <nav className='menu'>
         <i className='icon-user-circle' />
