@@ -27,7 +27,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.scss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -48,26 +48,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff(2)?(\?[a-z0-9]+)?$/,
-        use: [
-          {
-            loader: 'url-loader?limit=10000&mimetype=application/font-woff',
-            options: {
-              name: 'assets/fonts/[hash].[ext]',
-            },
-          },
-        ],
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
       },
       {
-        test: /\.(ttf|eot|svg)(\?[a-z0-9]+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'assets/fonts/[hash].[ext]',
-            },
-          },
-        ],
+        test: /\.(woff|eot|ttf|svg)$/,
+        loader: 'url-loader',
+        options: {
+          name: 'assets/fonts/[name].[ext]',
+          limit: 1000,
+        },
       },
     ],
   },

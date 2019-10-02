@@ -13,11 +13,12 @@
       display: inline-block;
       width: 200px;
       height: 250px;
+      object-fit: cover;
     }
   }
 }
 
-.carrousel__item:hover {
+.carrousel__list .carrousel__item:hover {
   transform: scale(1.4);
   opacity: 1;
 }
@@ -58,6 +59,7 @@
   font-weight: bold;
   border-radius: 50%;
   background: #fff;
+  margin-right: 5px;
 }
 
 .icon-plus:before {
