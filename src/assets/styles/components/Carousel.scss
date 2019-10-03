@@ -1,0 +1,23 @@
+.movies{
+  display: grid;
+  grid-auto-rows: 50px 350px;
+  grid-gap: 5px;
+  align-items: center;
+
+  h3{
+    margin: 0;
+  }
+
+  .carrousel__list{
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    padding: 50px 0;
+  }
+}
+
+.carrousel__list:hover .carrousel__item{
+  opacity: .5;
+}

@@ -1,0 +1,48 @@
+@import '../Vars.scss';
+
+.search{
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  label{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .search__bar-container{
+    position: relative;
+    width: 65%;
+  }
+
+  .search__bar-input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border: 1px solid $color-font;
+    background: #AB88FF;
+    border-radius: 35px;
+    padding: 0 10px;
+    font-size: .9em;
+    color: $color-font;
+    font-family: $font-muli; 
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .search__bar-input::placeholder{
+    color: $color-font;
+  }
+}
+
+.icon-search::after {
+  content: "\e901";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 35px;
+}

@@ -1,0 +1,16 @@
+@import '../Vars.scss';
+
+footer {
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 15px;
+  align-content: center;
+  justify-content: start;
+  a {
+    @extend %a-settings;
+  }
+  a:hover {
+    @extend %a-transform;
+  }
+}

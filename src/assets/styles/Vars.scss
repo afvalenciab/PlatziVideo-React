@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$font-muli: "Muli", sans-serif;
+$color-font: #fff;
+
+%a-settings {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-font;
+  transition: 0.2s;
+  will-change: transform;
+}
+%a-transform {
+  text-decoration: underline;
+  transform: scale(1.04);
+}
