@@ -1,6 +1,7 @@
 @import '../Vars.scss';
 
 .header {
+  grid-area: header;
   height: 70px;
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -22,6 +23,12 @@
     position: relative;
     height: inherit;
 
+    img{
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 7px;
+    }
+
     p{
       margin: 0;
     }
@@ -33,7 +40,7 @@
       position: absolute;
       top: 100%;
       right: 0;
-      width: 110px;
+      width: max-content;
       display: none;
 
       li {

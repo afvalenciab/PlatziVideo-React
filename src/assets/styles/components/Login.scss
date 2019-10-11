@@ -1,0 +1,140 @@
+$font-Muli: "Muli", sans-serif;
+$color-font: #fff;
+
+%flex-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%a-settings {
+  text-decoration: none;
+  color: $color-font;
+  font-size: 0.9em;
+  transition: 0.1s;
+  will-change: transform;
+}
+%a-transform {
+  text-decoration: underline;
+  transform: scale(1.02);
+  transform-origin: 0 100%;
+}
+
+.login {
+  grid-area: login;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 5px;
+  align-items: center;
+  align-content: space-evenly;
+  font-size: 16px;
+  border: 1px solid $color-font;
+  border-radius: 25px;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, 0.1);
+
+  h2 {
+    margin: 0;
+    margin: 15px 0;
+    font-size: 1.3em;
+  }
+
+  form {
+    > input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      outline: none;
+      border: 0;
+      border-bottom: 1px solid $color-font;
+      background: transparent;
+      padding: 10px;
+      font-size: 0.9em;
+      color: $color-font;
+      font-family: $font-Muli;
+    }
+    input::placeholder {
+      color: $color-font;
+      font-weight: 100;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      height: 40px;
+      border-radius: 50px;
+      outline: none;
+      font-family: $font-Muli;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      background: rgba(255, 255, 255, 0.4);
+      color: $color-font;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      will-change: transform;      
+    }
+    button:active {
+      transform: scale(0.9);
+    }
+
+    .login__options {
+      font-size: 0.9em;
+      @extend %flex-settings;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      a {
+        display: inline-block;
+        font-size: 1em;
+        @extend %a-settings;
+      }
+      a:hover {
+        @extend %a-transform;
+      }
+
+      input[type="checkbox"] {
+        margin: 0;
+        width: 14.3px;
+        height: 14.3px;        
+      }
+    }
+  }
+
+  .login__social {
+    a {
+      display: block;
+      margin-bottom: 10px;
+      @extend %a-settings;
+    }
+    a:hover {
+      @extend %a-transform;
+    }
+  }
+
+  .icon-google:before {
+    content: "\ea88";
+  }
+
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+
+  .login__singup {
+    font-size: 0.9em;
+    p {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    a {
+      display: inline-block;
+      @extend %a-settings;
+      font-size: 1em;
+      font-weight: 600;
+      padding: 0 5px;
+    }
+    a:hover {
+      @extend %a-transform;
+    }
+  }
+}

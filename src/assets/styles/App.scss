@@ -1,15 +1,59 @@
 @import './Vars.scss';
 
+$background-color-up: #21c08b;
+$background-color-down: #8f57fd;
+$background-home: #8f57fd;
+$height-header: 70px;
+$height-main: minmax(357px, calc(100vh - 170px));
+
 body{
   margin: 0;
 }
 
 .container {
-  background: #8f57fd;  
-  color: $color-font;
-  font-family: $font-muli;
-  padding: 5px 15px;
   display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-row-gap: 5px;
+  grid-gap: 5px;
+  color: $color-font;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: $font-muli;
+}
+
+.container.isHome {
+  background: #8f57fd;
+  grid-template: $height-header auto 70px / 1fr 320px 1fr;
+  grid-template-areas:
+    "header header header"
+    "home home home"
+    "footer footer footer";
+}
+
+.container.isLogin{
+  grid-template: $height-header $height-main 70px / 1fr 320px 1fr;
+  grid-template-areas:
+    "header header header"
+    ". login ."
+    "footer footer footer";
+
+  background: linear-gradient($background-color-up, $background-color-down);
+}
+
+.container.isSignup{
+  grid-template: $height-header $height-main 70px / 1fr 320px 1fr;
+  grid-template-areas:
+    "header header header"
+    ". signup ."
+    "footer footer footer";
+
+  background: linear-gradient($background-color-up, $background-color-down);
+}
+
+.container.isNotFound{
+  grid-template: $height-header $height-main 70px / 1fr 320px 1fr;
+  grid-template-areas:
+    "header header header"
+    ". not-found ."
+    "footer footer footer";
+
+  background: linear-gradient($background-color-up, $background-color-down);
 }

@@ -69,3 +69,12 @@
 .icon-play:before {
   content: '\e903';
 }
+
+.icon-remove:before {
+  content: "\e904";
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}

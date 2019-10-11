@@ -1,6 +1,7 @@
 @import '../Vars.scss';
 
 footer {
+  grid-area: footer;
   height: 70px;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -14,3 +15,18 @@ footer {
     @extend %a-transform;
   }
 }
+
+
+// .footer {
+//   grid-area: footer;
+//   @extend %flex-settings;
+//   justify-content: flex-start;
+
+//   a {
+//     @extend %a-settings;
+//     margin-right: 10px;
+//   }
+//   a:hover {
+//     @extend %a-transform;
+//   }
+// }

@@ -1,25 +1,24 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?a57ofv");
-  src: url("../fonts/icomoon.eot?a57ofv#iefix") format("embedded-opentype"),
-    url("../fonts/icomoon.ttf?a57ofv") format("truetype"),
-    url("../fonts/icomoon.woff?a57ofv") format("woff"),
-    url("../fonts/icomoon.svg?a57ofv#icomoon") format("svg");
-  font-weight: normal;
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?253aam');
+  src:  url('../fonts/icomoon.eot?253aam#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?253aam') format('truetype'),
+    url('../fonts/icomoon.woff?253aam') format('woff'),
+    url('../fonts/icomoon.svg?253aam#icomoon') format('svg');
+  font-weight: bold;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak-as: none;
   font-style: normal;
   font-weight: 700;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: .9;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
