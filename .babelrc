@@ -2,5 +2,14 @@
   "presets" : [
     "@babel/preset-env", //Compatibilidad de ECMAS5, ECMAS6
     "@babel/preset-react" //Compatibilidad de JSX, REACT
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-class-properties",
+        "react-hot-loader/babel",
+        "babel-plugin-transform-object-assign"
+      ]
+    }
+  }
 }

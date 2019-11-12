@@ -6,7 +6,6 @@ import '../assets/styles/App.scss';
 
 const Layout = ({ children, pathName }) => {
   let className = 'container';
-
   switch (pathName) {
     case '/':
       className += ' isHome';
