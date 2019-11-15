@@ -10,7 +10,7 @@ import '../assets/styles/Icons.css';
 const Home = (props) => {
   const { myList, trends, originals, searching } = props;
   props.setPathName(props.location.pathname);
-  console.log(searching.length);
+
   return (
     <div className='home'>
       <Search />
@@ -37,7 +37,7 @@ const Home = (props) => {
         (trends.length > 0 && (
           <Carousel title='Tendencias'>
             {trends.map((item) => {
-              return <CarouselItem key={item.id} {...item} />;
+              return <CarouselItem key={item._id} {...item} />;
             })}
           </Carousel>
         ))
@@ -48,7 +48,7 @@ const Home = (props) => {
         (originals.length > 0 && (
           <Carousel title='Originales de Platzi Video'>
             {originals.map((item) => (
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem key={item._id} {...item} />
             ))}
           </Carousel>
         ))

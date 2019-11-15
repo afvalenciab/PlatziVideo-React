@@ -1,7 +1,10 @@
 {
-  "presets" : [
+  "presets": [
     "@babel/preset-env", //Compatibilidad de ECMAS5, ECMAS6
     "@babel/preset-react" //Compatibilidad de JSX, REACT
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
   ],
   "env": {
     "development": {

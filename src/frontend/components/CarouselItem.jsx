@@ -3,16 +3,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { setFavorite, deleteFavorite } from '../actions';
+import { setFavoriteUserMovies, deleteFavorite } from '../actions';
 import '../assets/styles/components/CarouselItem.scss';
-import imgCover1 from '../assets/static/above-action-aerial-2346289.jpg';
 
 const CarouselItem = (props) => {
-  const { id, cover, title, year, contentRating, duration, isList } = props;
+  const { id, _id, cover, title, year, contentRating, duration, isList, user } = props;
 
   const handleSetFavorite = () => {
-    props.setFavorite({
-      id, cover, title, year, contentRating, duration,
+    props.setFavoriteUserMovies({
+      id, _id, cover, title, year, contentRating, duration, userId: user.id,
     });
   };
 
@@ -55,8 +54,14 @@ CarouselItem.propTypes = {
 };
 
 const mapDispatchToProps = {
-  setFavorite,
+  setFavoriteUserMovies,
   deleteFavorite,
 };
 
-export default connect(null, mapDispatchToProps)(CarouselItem);
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CarouselItem);

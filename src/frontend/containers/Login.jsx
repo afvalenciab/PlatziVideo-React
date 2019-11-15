@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loginRequest, setPathName } from '../actions';
+import { loginUser, setPathName } from '../actions';
 import '../assets/styles/components/Login.scss';
 import '../assets/styles/Icons.css';
 
@@ -20,8 +20,7 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.loginRequest(form);
-    props.history.push('/');
+    props.loginUser(form, '/');
   };
 
   return (
@@ -62,7 +61,7 @@ const Login = (props) => {
 };
 
 const mapDispatchToProps = {
-  loginRequest,
+  loginUser,
   setPathName,
 };
 

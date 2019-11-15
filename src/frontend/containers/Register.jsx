@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { registerRequest, setPathName } from '../actions';
+import { registerUser, setPathName } from '../actions';
 import '../assets/styles/components/Register.scss';
 
 const Register = (props) => {
-  props.setPathName(props.location.pathname);
+  const { setPathName, location } = props;
+
+  setPathName(location.pathname);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -20,17 +22,16 @@ const Register = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.registerRequest(form);
-    props.history.push('/');
+    props.registerUser(form, '/login');
   };
 
   return (
     <section className='signup'>
       <h2>Regístrate</h2>
       <form onSubmit={handleSubmit}>
-        <input name='name' type='text' placeholder='Nombre' onChange={handleInput} />
-        <input name='email' type='email' placeholder='Correo' onChange={handleInput} />
-        <input name='password' type='Password' placeholder='Constraseña' onChange={handleInput} />
+        <input name='name' type='text' placeholder='Nombre' onChange={handleInput} required />
+        <input name='email' type='email' placeholder='Correo' onChange={handleInput} required />
+        <input name='password' type='Password' placeholder='Constraseña' onChange={handleInput} required />
         <button type='submit'>Registrarme</button>
       </form>
       <div className='singup__login'>
@@ -46,7 +47,7 @@ const Register = (props) => {
 };
 
 const mapDispatchToProps = {
-  registerRequest,
+  registerUser,
   setPathName,
 };
 

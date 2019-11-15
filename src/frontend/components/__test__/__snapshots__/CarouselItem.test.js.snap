@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel Item testing Match Snapshot 1`] = `
+<div
+  className="carrousel__item"
+>
+  <figure>
+    <img />
+  </figure>
+  <div
+    className="carrousel__item-cover"
+  >
+    <a
+      href="/player/undefined"
+      onClick={[Function]}
+    >
+      <i
+        className="icon-play icon"
+      />
+    </a>
+    <i
+      className="icon-plus icon"
+      onClick={[Function]}
+    />
+    <p
+      className="title__movie"
+    />
+    <p
+      className="detail__movie"
+    >
+      undefined undefined undefined minutos
+    </p>
+  </div>
+</div>
+`;

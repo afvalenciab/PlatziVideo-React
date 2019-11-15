@@ -127,7 +127,7 @@ module.exports = {
     isProd ? new CompressionPlugin({
       test: /\.js$|\.css$/,
       filename: '[path].gz',
-    }) : new CompressionPlugin(),
-    new ManifestPlugin(),
+    }) : () => {},
+    isProd ? new ManifestPlugin() : () => {},
   ],
 };
